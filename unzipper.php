@@ -204,7 +204,7 @@ class Unzipper {
       return;
     }
     // Check if archive is readable.
-    if ($rar = RarArchive::open($archive)) {
+    if ($rar = 'RarArchive'::open($archive)) {
       // Check if destination is writable
       if (is_writeable($destination . '/')) {
         $entries = $rar->getEntries();
